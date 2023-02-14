@@ -1,8 +1,10 @@
+import css from '../Filter/Filter.module.css';
+
 export function Filter({ value, onFilterChange }) {
   return (
-    <>
+    <div>
       <label>
-        <span>Find contact by name</span>
+        <span className={css.labelName}>Find contact by name</span>
         <input
           type="text"
           name="filter"
@@ -10,6 +12,6 @@ export function Filter({ value, onFilterChange }) {
           onChange={onFilterChange}
         ></input>
       </label>
-    </>
+    </div>
   );
 }

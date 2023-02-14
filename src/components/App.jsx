@@ -4,6 +4,7 @@ import { Filter } from './Filter/Filter';
 import { ContactList } from './ContactList/ContactList';
 import { FormAddContacts } from './FormAddContacts/FormAddContacts';
 import { nanoid } from 'nanoid';
+import css from '../components/ContactRender/ContactRender.module.css';
 
 export class App extends Component {
   state = {
@@ -25,11 +26,6 @@ export class App extends Component {
     this.setState(prevState => ({
       contacts: [newContact, ...prevState.contacts],
     }));
-    //
-    // this.setState({
-    //   contacts: this.state.contacts.splice(0, 0, newContact),
-    // });
-    // !this.state.contacts.includes(contact) && this.state.contacts.push(contact);
   };
 
   handleFilter = evt => {
@@ -63,7 +59,14 @@ export class App extends Component {
           flexDirection: 'column',
         }}
       >
-        <h1>Phonebook</h1>
+        <h1
+          style={{
+            color: '#3a3639',
+            textShadow: '-5px -3px 5px #B23479',
+          }}
+        >
+          My Phonebook
+        </h1>
         <FormAddContacts onSubmit={this.addContact} />
         <h2>Contacts</h2>
         <Filter value={this.state.filter} onFilterChange={this.handleFilter} />

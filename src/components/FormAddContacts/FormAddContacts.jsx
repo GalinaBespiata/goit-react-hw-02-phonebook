@@ -23,7 +23,7 @@ export class FormAddContacts extends Component {
       name: this.state.name,
       number: this.state.number,
     };
-    this.props.onSubmit(contact); //спитати чи можна до пропсів звертатися не прописуючи їх в параметрах
+    this.props.onSubmit(contact);
 
     this.reset();
   };
@@ -39,7 +39,7 @@ export class FormAddContacts extends Component {
     return (
       <form className={css.formEl} onSubmit={this.handleSubmit}>
         <label>
-          <span>Name</span>
+          <span className={css.labelName}>Name</span>
           <input
             className={css.inputEl}
             value={this.state.name}
@@ -52,7 +52,7 @@ export class FormAddContacts extends Component {
           />
         </label>
         <label>
-          <span>Number</span>
+          <span className={css.labelTel}>Number</span>
           <input
             className={css.inputEl}
             value={this.state.number}
@@ -64,7 +64,7 @@ export class FormAddContacts extends Component {
             onChange={this.handleInputChange}
           />
         </label>
-        <button className={css.inputEl} type="submit" onClick={this.addContact}>
+        <button className={css.btn} type="submit" onClick={this.addContact}>
           Add contact
         </button>
       </form>

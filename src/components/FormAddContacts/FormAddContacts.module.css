@@ -1,0 +1,7 @@
+.formEl {
+  display: flex;
+  flex-direction: column;
+}
+.inputEl {
+  margin: 10px;
+}

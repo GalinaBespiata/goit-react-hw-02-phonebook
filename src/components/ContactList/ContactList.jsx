@@ -1,6 +1,5 @@
-import { nanoid } from 'nanoid';
 import PropTypes from 'prop-types';
-import css from '../ContactRender/ContactRender.module.css';
+
 import { Contact } from '../ContactRender/ContactRender.jsx';
 
 export function ContactList({ contacts, onDeleteContact = () => {} }) {

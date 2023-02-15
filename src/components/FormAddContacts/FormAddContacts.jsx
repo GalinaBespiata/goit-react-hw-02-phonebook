@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { nanoid } from 'nanoid';
+
 import css from '../FormAddContacts/FormAddContacts.module.css';
 
 export class FormAddContacts extends Component {

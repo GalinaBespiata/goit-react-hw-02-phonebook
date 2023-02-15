@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import css from '../Filter/Filter.module.css';
 
 export function Filter({ value, onFilterChange }) {
@@ -15,3 +16,8 @@ export function Filter({ value, onFilterChange }) {
     </div>
   );
 }
+
+Filter.propTypes = {
+  value: PropTypes.string.isRequired,
+  onFilterChange: PropTypes.func.isRequired,
+};

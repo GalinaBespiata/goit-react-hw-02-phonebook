@@ -1,4 +1,3 @@
-// import PropTypes from 'prop-types';
 import { Component } from 'react';
 import { nanoid } from 'nanoid';
 import css from '../FormAddContacts/FormAddContacts.module.css';
